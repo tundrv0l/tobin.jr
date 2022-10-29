@@ -5,9 +5,6 @@ from PIL import ImageChops
 import numpy as np
 
 
-matrixA = np.matrix('1,2,3;3,4,5;6,7,9')
-matrixB = np.matrix('1,2;3,4')
-
 
 def trim(im):
     bg = Image.new(im.mode, im.size, im.getpixel((0,0)))
@@ -20,7 +17,7 @@ def trim(im):
 # An image generator that takes in two matrices and a string and outputs an image
 def image_genA(matrixA, text, matrixB ):
     # Load font, this will crash on linux if you don't have the font installed
-    font = ImageFont.truetype("/Windows/Fonts/Arial.ttf", 32, encoding="unic")
+    font = ImageFont.truetype("/usr/share/fonts/truetype/msttcorefonts/Arial.ttf", 32, encoding="unic")
     # Set an arbitrary size for the image, trim() will resize it later
     canvas = Image.new('RGB', (1200, 1200), "white")
     # draw.text((x, y),"Sample Text",(r,g,b))
@@ -39,7 +36,7 @@ def image_genA(matrixA, text, matrixB ):
 # An image generator that takes a matrix and a string and outputs an image
 def image_genB(matrixA, text):
     # Load font, this will crash on linux if you don't have the font installed
-    font = ImageFont.truetype("/Windows/Fonts/Arial.ttf", 32, encoding="unic")
+    font = ImageFont.truetype("/usr/share/fonts/truetype/msttcorefonts/Arial.ttf", 32, encoding="unic")
     # Set an arbitrary size for the image, trim() will resize it later
     canvas = Image.new('RGB', (1200, 1200), "white")
     # draw.text((x, y),"Sample Text",(r,g,b))
@@ -56,7 +53,7 @@ def image_genB(matrixA, text):
 # An image generator that takes in two matrices and a string and outputs an image
 def image_genC(matrixA, matrixB, text, matrixC):
     # Load font, this will crash on linux if you don't have the font installed
-    font = ImageFont.truetype("/Windows/Fonts/Arial.ttf", 32, encoding="unic")
+    font = ImageFont.truetype("/usr/share/fonts/truetype/msttcorefonts/Arial.ttf", 32, encoding="unic")
     # Set an arbitrary size for the image, trim() will resize it later
     canvas = Image.new('RGB', (1500, 1500), "white")
     # draw.text((x, y),"Sample Text",(r,g,b))
