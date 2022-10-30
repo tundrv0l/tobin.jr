@@ -19,16 +19,16 @@ def image_genA(matrixA, text, matrixB ):
     # Load font, this will crash on linux if you don't have the font installed
     font = ImageFont.truetype("/usr/share/fonts/truetype/msttcorefonts/Arial.ttf", 32, encoding="unic")
     # Set an arbitrary size for the image, trim() will resize it later
-    canvas = Image.new('RGB', (1200, 1200), "white")
+    canvas = Image.new('RGB', (1200, 1200), (66, 69 ,73))
     # draw.text((x, y),"Sample Text",(r,g,b))
     draw = ImageDraw.Draw(canvas)
     # Draw the text to the image, increment right to keep up spacing.
     right = 0
-    draw.text((right, 5), f'{matrixA}', 'black', font=font)
+    draw.text((right, 5), f'{matrixA}', 'white', font=font)
     right += (len(matrixA) * 36) + 30
-    draw.text((right, len(matrixA) * 15), text , 'black', font=font)
+    draw.text((right, len(matrixA) * 15), text , 'white', font=font)
     right += (len(text) * 13) + 30
-    draw.text((right, 5), f'{matrixB}', 'black', font=font)
+    draw.text((right, 5), f'{matrixB}', 'white', font=font)
     canvas = trim(canvas)
     canvas.save('result.png', 'PNG')
 
@@ -38,14 +38,14 @@ def image_genB(matrixA, text):
     # Load font, this will crash on linux if you don't have the font installed
     font = ImageFont.truetype("/usr/share/fonts/truetype/msttcorefonts/Arial.ttf", 32, encoding="unic")
     # Set an arbitrary size for the image, trim() will resize it later
-    canvas = Image.new('RGB', (1200, 1200), "white")
+    canvas = Image.new('RGB', (1200, 1200), (66, 69 ,73))
     # draw.text((x, y),"Sample Text",(r,g,b))
     draw = ImageDraw.Draw(canvas)
     # Draw the text to the image, increment right to keep up spacing.
     right = 0
-    draw.text((right, 5), f'{matrixA}', 'black', font=font)
+    draw.text((right, 5), f'{matrixA}', 'white', font=font)
     right += (len(matrixA) * 36) + 30
-    draw.text((right, len(matrixA) * 15), text , 'black', font=font)
+    draw.text((right, len(matrixA) * 15), text , 'white', font=font)
     canvas = trim(canvas)
     canvas.save('result.png', 'PNG')
 
@@ -55,17 +55,17 @@ def image_genC(matrixA, matrixB, text, matrixC):
     # Load font, this will crash on linux if you don't have the font installed
     font = ImageFont.truetype("/usr/share/fonts/truetype/msttcorefonts/Arial.ttf", 32, encoding="unic")
     # Set an arbitrary size for the image, trim() will resize it later
-    canvas = Image.new('RGB', (1500, 1500), "white")
+    canvas = Image.new('RGB', (1500, 1500), (66, 69 ,73))
     # draw.text((x, y),"Sample Text",(r,g,b))
     draw = ImageDraw.Draw(canvas)
     # Draw the text to the image, increment right to keep up spacing.
     right = 0
-    draw.text((right, 5), f'{matrixA} ,', 'black', font=font)
+    draw.text((right, 5), f'{matrixA} ,', 'white', font=font)
     right += (len(matrixA) * 36) + 30
-    draw.text((right, 5), f'{matrixB}' , 'black', font=font)
+    draw.text((right, 5), f'{matrixB}' , 'white', font=font)
     right += (len(matrixB) * 18) + 30
-    draw.text((right, len(matrixA) * 15), text , 'black', font=font)
+    draw.text((right, len(matrixA) * 15), text , 'white', font=font)
     right += (len(text) * 12) + 30
-    draw.text((right, 5), f'{matrixC}', 'black', font=font)
+    draw.text((right, 5), f'{matrixC}', 'white', font=font)
     canvas = trim(canvas)
     canvas.save('result.png', 'PNG')

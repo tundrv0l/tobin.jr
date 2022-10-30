@@ -56,13 +56,6 @@ def is_square(matrix):
 #---------------------------------COMMANDS---------------------------------#
 
 
-#How-To Function
-@client.command(description = 'Gives a general overview of how to use the bot')
-async def howto(ctx):
-    await ctx.send ('''
-        This bot is designed to employ a wide variety of linear algebra concepts to help you with your homework. To use a vector command, simply type the command and then the vectors in the form (a,b,c,...n) and (d,e,f,...n) exactly. **Don't leave spaces between the numbers and commas/parenthesis.** To use a matrix command, simply type the command followed by your matrix in the form [a,b;c,d;f,g]. Each semicolon denotes a new row. Therefore, a belongs to M11, c to M21, etc. This is a wip (*vectors are really stupid to parse*), so if you have any suggestions, please let me know!''')
-
-
 # Rank of a Matrix Function
 @client.command(description='Calculates the rank of a matrix.')
 async def rank(ctx, message):
@@ -155,7 +148,7 @@ async def orthonormal(ctx, message):
         message = ctx.message.content[13:].replace(' ','')
         # Get the matrix
         matrixA = np.matrix(message, dtype=int)
-        matrixB - sp.linalg.orth(matrixA)
+        matrixB = sp.linalg.orth(matrixA)
         image_genA(matrixA, "has an orthonormal basis of: ", matrixB)
         await ctx.send(file=discord.File('result.png'))
     except SyntaxError:
