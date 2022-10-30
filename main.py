@@ -84,7 +84,7 @@ async def det(ctx, message):
         else:
             image_genB(matrixA, f"has a determinant of: {matrixB}")
             await ctx.send(file=discord.File('result.png'))
-    except SyntaxError:
+    except:
         await ctx.send("Cannot Compute. Please ensure you entered your matrix in the correct form.")
 
 # Inverse of a Matrix Function
@@ -104,7 +104,7 @@ async def inverse(ctx, message):
             matrixB = np.array_str(matrixB, precision=2)
             image_genA(matrix, "has a inverse of: ", matrixB)
             await ctx.send(file=discord.File('result.png'))
-    except SyntaxError:
+    except:
         await ctx.send("Cannot Compute. Please ensure you entered your matrix in the correct form.")
 
 # Solve a linear matrix equation Function
@@ -123,7 +123,7 @@ async def solvelinear(ctx, message):
         else:
             image_genC(matrixA, matrixB, "has a solution of: ", matrixC)
             await ctx.send(file=discord.File('result.png'))
-    except SyntaxError:
+    except:
         await ctx.send("Cannot Compute. Please ensure you entered your matrix in the correct form.")
 
 # Find the nullspace of a matrix Function
@@ -137,7 +137,7 @@ async def nullspace(ctx, message):
         matrixB = np.array_str(sp.linalg.null_space(matrixA), precision=2)
         image_genA(matrixA, "has a nullspace of: ", matrixB)
         await ctx.send(file=discord.File('result.png'))
-    except SyntaxError:
+    except:
         await ctx.send("Cannot Compute. Please ensure you entered your matrix in the correct form.")
 
 # Finds the orthonormal basis of a matrix Function
@@ -151,7 +151,7 @@ async def orthonormal(ctx, message):
         matrixB = sp.linalg.orth(matrixA)
         image_genA(matrixA, "has an orthonormal basis of: ", matrixB)
         await ctx.send(file=discord.File('result.png'))
-    except SyntaxError:
+    except:
         await ctx.send("Cannot Compute. Please ensure you entered your matrix in the correct form.")
 
 

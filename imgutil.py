@@ -19,7 +19,7 @@ def image_genA(matrixA, text, matrixB ):
     # Load font, this will crash on linux if you don't have the font installed
     font = ImageFont.truetype("/usr/share/fonts/truetype/msttcorefonts/Arial.ttf", 32, encoding="unic")
     # Set an arbitrary size for the image, trim() will resize it later
-    canvas = Image.new('RGB', (1200, 1200), (66, 69 ,73))
+    canvas = Image.new('RGB', (1200, 1200), (54,57,63))
     # draw.text((x, y),"Sample Text",(r,g,b))
     draw = ImageDraw.Draw(canvas)
     # Draw the text to the image, increment right to keep up spacing.
@@ -38,7 +38,7 @@ def image_genB(matrixA, text):
     # Load font, this will crash on linux if you don't have the font installed
     font = ImageFont.truetype("/usr/share/fonts/truetype/msttcorefonts/Arial.ttf", 32, encoding="unic")
     # Set an arbitrary size for the image, trim() will resize it later
-    canvas = Image.new('RGB', (1200, 1200), (66, 69 ,73))
+    canvas = Image.new('RGB', (1200, 1200), (54,57,63))
     # draw.text((x, y),"Sample Text",(r,g,b))
     draw = ImageDraw.Draw(canvas)
     # Draw the text to the image, increment right to keep up spacing.
@@ -55,7 +55,7 @@ def image_genC(matrixA, matrixB, text, matrixC):
     # Load font, this will crash on linux if you don't have the font installed
     font = ImageFont.truetype("/usr/share/fonts/truetype/msttcorefonts/Arial.ttf", 32, encoding="unic")
     # Set an arbitrary size for the image, trim() will resize it later
-    canvas = Image.new('RGB', (1500, 1500), (66, 69 ,73))
+    canvas = Image.new('RGB', (1500, 1500), (54,57,63))
     # draw.text((x, y),"Sample Text",(r,g,b))
     draw = ImageDraw.Draw(canvas)
     # Draw the text to the image, increment right to keep up spacing.
